@@ -61,6 +61,11 @@
       text-decoration: none;
     }
 
+    a:hover {
+      opacity: 0.9;
+      text-decoration: underline;
+    }
+
     section, .hero {
       max-width: 1150px;
       margin: auto;
@@ -88,6 +93,7 @@
       line-height: .9;
       letter-spacing: -4px;
       margin: 15px 0 25px;
+      text-shadow: 0 0 18px rgba(99, 199, 255, 0.2);
     }
 
     h2 {
@@ -124,6 +130,52 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
+    }
+
+    .milestone-table,
+    .bibliography-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: linear-gradient(145deg, var(--card), #091725);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .milestone-table th,
+    .milestone-table td,
+    .bibliography-table th,
+    .bibliography-table td {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: top;
+      color: var(--text);
+    }
+
+    .milestone-table th,
+    .bibliography-table th {
+      background: rgba(99, 199, 255, 0.08);
+      color: var(--green);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .milestone-table tr:last-child td,
+    .bibliography-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .bibliography-table td:first-child {
+      width: 40px;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .bibliography-table a {
+      word-break: break-word;
     }
 
     .card, .step {
@@ -194,6 +246,57 @@
       opacity: .9;
     }
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .team-card {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gallery-item {
+      background: linear-gradient(145deg, var(--card), #091725);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 200px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .gallery-item .caption {
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .sponsor-card {
+      background: linear-gradient(145deg, var(--card), #091725);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
     footer {
       text-align: center;
       padding: 40px 22px;
@@ -244,7 +347,7 @@
         <p>VITALIS is our prototype system designed to help astronauts manage sleep, fatigue, naps, caffeine, and changing work shifts during space missions.</p>
       </div>
       <div class="hero-visual">
-        <img src="NASA_Hunch-Vitalis.png" alt="VITALIS project image">
+        <img src="images/NASA%20Hunch-Vitalis.png" alt="VITALIS project image">
       </div>
     </section>
 
@@ -313,6 +416,25 @@
       <p><a href="https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF" target="_blank" rel="noreferrer">https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF</a></p>
     </section>
 
+    <section id="gallery">
+      <div class="eyebrow">05.5 • Gallery</div>
+      <h2>Project visuals</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/NASA%20Hunch-Vitalis.png" alt="VITALIS project header image">
+          <div class="caption">VITALIS concept image</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/NASA%20Hunch-Vitalis.png" alt="VITALIS prototype concept image">
+          <div class="caption">Prototype concept</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/NASA%20Hunch-Vitalis.png" alt="VITALIS system design image">
+          <div class="caption">System design</div>
+        </div>
+      </div>
+    </section>
+
     <section id="refining">
       <div class="eyebrow">06 • Product Refinement</div>
       <h2>What we added & refined</h2>
@@ -361,38 +483,82 @@
 
     <section id="milestones">
       <div class="eyebrow">08 • Milestones</div>
-      <h2>Project timeline</h2>
-      <div class="timeline">
-        <article>
-          <div class="date">Agust-September 2026</div>
-          <h3>Research & problem framing</h3>
-          <p>We started by studying human sleep needs, fatigue risks, and how crew schedules change during missions.</p>
-        </article>
-        <article>
-          <div class="date">October- 2026</div>
-          <h3>Concept exploration</h3>
-          <p>We explored the app idea and identified the key features required for a NASA mission-inspired workflow.</p>
-        </article>
-        <article>
-          <div class="date">Summer 2026</div>
-          <h3>Prototype development</h3>
-          <p>We built the initial VITALIS prototype and tested its logic with realistic scheduling and fatigue scenarios.</p>
-        </article>
-        <article>
-          <div class="date">Fall 2026–27</div>
-          <h3>Refinement & testing</h3>
-          <p>We improved personalization, added feedback loops, and refined the experience based on test findings.</p>
-        </article>
-      </div>
+      <h2>VITALIS Project Timeline</h2>
+      <table class="milestone-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Milestone</th>
+            <th>What VITALIS Should Have</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>August 2026</td>
+            <td>Project Kickoff &amp; Brainstorming</td>
+            <td>Understand the NASA problem, research astronaut sleep, brainstorm hardware and software solutions.</td>
+          </tr>
+          <tr>
+            <td>August–September 2026</td>
+            <td>Research &amp; Initial Design</td>
+            <td>Research sleep, fatigue, melatonin, nutrition, caffeine, wearable technology, and NASA requirements.</td>
+          </tr>
+          <tr>
+            <td>September 2026</td>
+            <td>First Prototype</td>
+            <td>Build the first working version of the VITALIS software.</td>
+          </tr>
+          <tr>
+            <td>September 2026</td>
+            <td>Initial Testing</td>
+            <td>Test the sleep recommendation system and identify problems with personalization.</td>
+          </tr>
+          <tr>
+            <td>October–December 2026</td>
+            <td>PDR Preparation</td>
+            <td>Improve the prototype to at least a 60%+ working prototype, prepare the website, DAAN, presentation board, prototype video, and presentation.</td>
+          </tr>
+          <tr>
+            <td>PDR — October–December 2026</td>
+            <td>Preliminary Design Review</td>
+            <td>Present the early/semi-functional prototype and receive feedback from NASA HUNCH mentors and engineers.</td>
+          </tr>
+          <tr>
+            <td>After PDR</td>
+            <td>Refinement</td>
+            <td>Use NASA feedback to improve the sleep algorithm, shift matching, testing, and prototype.</td>
+          </tr>
+          <tr>
+            <td>January–March 2027</td>
+            <td>CDR Preparation</td>
+            <td>Reach approximately a 90%+ working prototype, improve testing/data, website, DAAN, brochure, videos, and presentation.</td>
+          </tr>
+          <tr>
+            <td>CDR — Late January–Early March 2027</td>
+            <td>Critical Design Review</td>
+            <td>Present the improved functional prototype to NASA HUNCH mentors and engineers.</td>
+          </tr>
+          <tr>
+            <td>After CDR</td>
+            <td>Final Refinement &amp; Testing</td>
+            <td>Use CDR feedback, continue testing, improve accuracy, and prepare the final version.</td>
+          </tr>
+          <tr>
+            <td>May 4–6, 2027</td>
+            <td>FDR / Final Design Review</td>
+            <td>If selected as a finalist, present VITALIS at Johnson Space Center in Houston.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="team">
       <div class="eyebrow">09 • The Team</div>
       <h2>Meet the creators</h2>
       <div class="grid">
-        <div class="card"><h3>Kitzel Mendiola</h3><p>Helped build and refine the prototype while contributing to the system's user experience.</p></div>
-        <div class="card"><h3>Hipolito Olvera</h3><p>Focused on concept development, design, and project coordination.</p></div>
-        <div class="card"><h3>Aracely Oviedo</h3><p>Contributed to the team’s research, testing, and project development.</p></div>
+        <div class="card team-card"><h3>Kitzel Mendiola</h3><p>Helped build and refine the prototype while contributing to the system's user experience.</p></div>
+        <div class="card team-card"><h3>Hipolito Olvera</h3><p>Focused on concept development, design, and project coordination.</p></div>
+        <div class="card team-card"><h3>Aracely Oviedo</h3><p>Contributed to the team’s research, testing, and project development.</p></div>
       </div>
     </section>
 
@@ -425,31 +591,96 @@
       </div>
     </section>
 
+    <section id="mentors">
+      <div class="eyebrow">10.5 • Support</div>
+      <h2>Mentors &amp; Support</h2>
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <h3>Claudia Cortez</h3>
+          <p>Teacher support and project guidance.</p>
+          <p>Email: <a href="mailto:cecortez@bisd.us">cecortez@bisd.us</a></p>
+          <p>Phone: <a href="tel:+19566980994">(956) 698-0994</a></p>
+        </div>
+        <div class="sponsor-card">
+          <h3>Maria G. Vasquez</h3>
+          <p>Teacher support and educational guidance.</p>
+          <p>Email: <a href="mailto:mgvasquez@bisd.us">mgvasquez@bisd.us</a></p>
+          <p>Phone: <a href="tel:+19566982264">(956) 698-2264</a></p>
+        </div>
+      </div>
+    </section>
+
     <section id="sources">
       <div class="eyebrow">11 • Sources</div>
       <h2>Bibliography</h2>
-      <div class="card">
-        <ol>
-          <li>Flutter. “Flutter Documentation.” Flutter, Google. <a href="https://docs.flutter.dev/" target="_blank" rel="noreferrer">https://docs.flutter.dev/</a> Used for building the VITALIS application interface, navigation, widgets, state management, and Windows desktop application.</li>
-          <li>Dart. “Dart Documentation.” Dart, Google. <a href="https://dart.dev/guides" target="_blank" rel="noreferrer">https://dart.dev/guides</a> Used for Dart programming syntax, classes, functions, variables, asynchronous programming, and application logic.</li>
-          <li>Flutter Blue Plus. “FlutterBluePlus Documentation.” pub.dev. <a href="https://pub.dev/packages/flutter_blue_plus" target="_blank" rel="noreferrer">https://pub.dev/packages/flutter_blue_plus</a> Used as a reference for the Bluetooth functionality planned for connecting VITALIS to wearable/biometric devices.</li>
-          <li>sqflite_common_ffi. “sqflite_common_ffi.” pub.dev. <a href="https://pub.dev/packages/sqflite_common_ffi" target="_blank" rel="noreferrer">https://pub.dev/packages/sqflite_common_ffi</a> Used for implementing the local SQLite database so VITALIS can store crew information, food intake, mission events, sleep logs, fatigue data, recommendations, and feedback while operating offline.</li>
-          <li>Path Provider / Path. “path.” pub.dev. <a href="https://pub.dev/packages/path" target="_blank" rel="noreferrer">https://pub.dev/packages/path</a> Used to construct the local database file path for the VITALIS offline database.</li>
-          <li>NASA. “Space Food Systems.” NASA. <a href="https://www.nasa.gov/directorates/esdmd/hhp/space-food-systems/" target="_blank" rel="noreferrer">https://www.nasa.gov/directorates/esdmd/hhp/space-food-systems/</a> Used as a reference when developing the VITALIS food and nutrition database.</li>
-          <li>NASA. “Food in Space.” NASA. <a href="https://www.nasa.gov/ochmo/food-in-space/" target="_blank" rel="noreferrer">https://www.nasa.gov/ochmo/food-in-space/</a> Used for background information about astronaut food and nutrition requirements.</li>
-          <li>NASA. “Risk of Inadequate Food and Nutrition.” NASA. <a href="https://www.nasa.gov/reference/risk-of-inadequate-food-and-nutrition/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/risk-of-inadequate-food-and-nutrition/</a> Used to understand how nutrition can affect astronaut health and mission performance.</li>
-          <li>NASA. “JSC Food &amp; Nutrition.” NASA. <a href="https://www.nasa.gov/reference/jsc-food-nutrition/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/jsc-food-nutrition/</a> Used for information about food and nutrition considerations for human spaceflight.</li>
-          <li>NASA. “Crew Systems.” NASA. <a href="https://www.nasa.gov/reference/crew-systems/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/crew-systems/</a> Used for background information about systems designed to support astronauts during missions.</li>
-          <li>NASA. “Artemis II: What’s on the Menu?” NASA, March 3, 2026. <a href="https://www.nasa.gov/missions/artemis/artemis-2/artemis-ii-whats-on-the-menu/" target="_blank" rel="noreferrer">https://www.nasa.gov/missions/artemis/artemis-2/artemis-ii-whats-on-the-menu/</a> Used as a current reference for Artemis astronaut food and meal planning.</li>
-          <li>NASA. “Life Encapsulated Inside NASA’s Orion for Artemis II.” NASA. <a href="https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii/" target="_blank" rel="noreferrer">https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii/</a> Used for information about food and crew-support systems aboard Orion.</li>
-          <li>NASA. “Space Nutrition.” NASA. <a href="https://science.nasa.gov/wp-content/uploads/2023/10/Space_Nutrition_Book.pdf" target="_blank" rel="noreferrer">https://science.nasa.gov/wp-content/uploads/2023/10/Space_Nutrition_Book.pdf</a> Used for background research on astronaut nutrition and the relationship between nutrition and spaceflight.</li>
-        </ol>
-      </div>
+      <table class="bibliography-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Flutter. “Flutter Documentation.” Flutter, Google. <a href="https://docs.flutter.dev/" target="_blank" rel="noreferrer">https://docs.flutter.dev/</a> Used for building the VITALIS application interface, navigation, widgets, state management, and Windows desktop application.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dart. “Dart Documentation.” Dart, Google. <a href="https://dart.dev/guides" target="_blank" rel="noreferrer">https://dart.dev/guides</a> Used for Dart programming syntax, classes, functions, variables, asynchronous programming, and application logic.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Flutter Blue Plus. “FlutterBluePlus Documentation.” pub.dev. <a href="https://pub.dev/packages/flutter_blue_plus" target="_blank" rel="noreferrer">https://pub.dev/packages/flutter_blue_plus</a> Used as a reference for the Bluetooth functionality planned for connecting VITALIS to wearable/biometric devices.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>sqflite_common_ffi. “sqflite_common_ffi.” pub.dev. <a href="https://pub.dev/packages/sqflite_common_ffi" target="_blank" rel="noreferrer">https://pub.dev/packages/sqflite_common_ffi</a> Used for implementing the local SQLite database so VITALIS can store crew information, food intake, mission events, sleep logs, fatigue data, recommendations, and feedback while operating offline.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Path Provider / Path. “path.” pub.dev. <a href="https://pub.dev/packages/path" target="_blank" rel="noreferrer">https://pub.dev/packages/path</a> Used to construct the local database file path for the VITALIS offline database.</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>NASA. “Space Food Systems.” NASA. <a href="https://www.nasa.gov/directorates/esdmd/hhp/space-food-systems/" target="_blank" rel="noreferrer">https://www.nasa.gov/directorates/esdmd/hhp/space-food-systems/</a> Used as a reference when developing the VITALIS food and nutrition database.</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>NASA. “Food in Space.” NASA. <a href="https://www.nasa.gov/ochmo/food-in-space/" target="_blank" rel="noreferrer">https://www.nasa.gov/ochmo/food-in-space/</a> Used for background information about astronaut food and nutrition requirements.</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>NASA. “Risk of Inadequate Food and Nutrition.” NASA. <a href="https://www.nasa.gov/reference/risk-of-inadequate-food-and-nutrition/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/risk-of-inadequate-food-and-nutrition/</a> Used to understand how nutrition can affect astronaut health and mission performance.</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>NASA. “JSC Food &amp; Nutrition.” NASA. <a href="https://www.nasa.gov/reference/jsc-food-nutrition/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/jsc-food-nutrition/</a> Used for information about food and nutrition considerations for human spaceflight.</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>NASA. “Crew Systems.” NASA. <a href="https://www.nasa.gov/reference/crew-systems/" target="_blank" rel="noreferrer">https://www.nasa.gov/reference/crew-systems/</a> Used for background information about systems designed to support astronauts during missions.</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>NASA. “Artemis II: What’s on the Menu?” NASA, March 3, 2026. <a href="https://www.nasa.gov/missions/artemis/artemis-2/artemis-ii-whats-on-the-menu/" target="_blank" rel="noreferrer">https://www.nasa.gov/missions/artemis/artemis-2/artemis-ii-whats-on-the-menu/</a> Used as a current reference for Artemis astronaut food and meal planning.</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>NASA. “Life Encapsulated Inside NASA’s Orion for Artemis II.” NASA. <a href="https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii/" target="_blank" rel="noreferrer">https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii/</a> Used for information about food and crew-support systems aboard Orion.</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>NASA. “Space Nutrition.” NASA. <a href="https://science.nasa.gov/wp-content/uploads/2023/10/Space_Nutrition_Book.pdf" target="_blank" rel="noreferrer">https://science.nasa.gov/wp-content/uploads/2023/10/Space_Nutrition_Book.pdf</a> Used for background research on astronaut nutrition and the relationship between nutrition and spaceflight.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
   <footer>
-    VITALIS • NASA HUNCH • Built for lunar sleep and shift planning.
+    VITALIS • NASA HUNCH • Built for lunar sleep and shift planning.<br>
+    <a href="mailto:2201915@stu.bisd.us">2201915@stu.bisd.us</a> • <a href="mailto:1602274@stu.bisd.us">1602274@stu.bisd.us</a> • <a href="https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF" target="_blank" rel="noreferrer">YouTube</a>
   </footer>
 </body>
 </html>
