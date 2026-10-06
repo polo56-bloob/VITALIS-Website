@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VITALIS | NASA HUNCH</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --card: #0d1b2d;
+      --line: #24405a;
+      --text: #edf6ff;
+      --muted: #a9bfd3;
+      --blue: #63c7ff;
+      --green: #8ee6d1;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at 20% 0, #12304b, #07111f 45%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #07111ff5;
+      border-bottom: 1px solid var(--line);
+      z-index: 5;
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .logo span, h1 span { color: var(--blue); }
+
+    nav div:last-child {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a, a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    section, .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 40px;
+      align-items: center;
+      padding-top: 90px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      line-height: .9;
+      letter-spacing: -4px;
+      margin: 15px 0 25px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin: 5px 0 25px;
+    }
+
+    h3 { margin-top: 0; }
+
+    .muted, p, li { color: var(--muted); }
+
+    .hero-visual {
+      background: linear-gradient(145deg, var(--card), #091725);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: 0 0 35px rgba(99, 199, 255, 0.12);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .card, .step {
+      background: linear-gradient(145deg, var(--card), #091725);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .step {
+      border-left: 2px solid var(--blue);
+      border-radius: 0;
+    }
+
+    .quote {
+      border-left: 3px solid var(--green);
+      padding: 18px 22px;
+      background: #0b1928;
+      margin-top: 25px;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--line);
+      padding-left: 25px;
+    }
+
+    .timeline article {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .timeline article:before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .date {
+      color: var(--green);
+      font-weight: bold;
+      font-size: .85rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: #04141f;
+      font-weight: 700;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: .9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    @media (max-width: 850px) {
+      .hero, .two { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .process { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .grid, .process { grid-template-columns: 1fr; }
+      .hero { padding-top: 60px; }
+      h1 { letter-spacing: -2px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">VITAL<span>I</span>S</div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+        <a href="#team">Team</a>
+        <a href="#sources">Bibliography</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">NASA HUNCH • SFT 2026–27</div>
+        <h1>VITAL<span>I</span>S</h1>
+        <p><strong>Lunar Sleep-Shift Scheduling Tool</strong></p>
+        <p>VITALIS is our prototype system designed to help astronauts manage sleep, fatigue, naps, caffeine, and changing work shifts during space missions.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/NASA%20Hunch-Vitalis.png" alt="VITALIS project image">
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">01 • The Problem</div>
+      <h2>Why VITALIS?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Changing schedules</h3>
+          <p>Different shifts can make it difficult to keep a consistent sleep schedule.</p>
+        </div>
+        <div class="card">
+          <h3>Fatigue</h3>
+          <p>Not getting enough sleep can affect alertness, concentration, and performance.</p>
+        </div>
+        <div class="card">
+          <h3>Mission operations</h3>
+          <p>Sleep opportunities need to work around important mission events and crew responsibilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution">
+      <div class="eyebrow">02 • Our Solution</div>
+      <h2>How VITALIS works</h2>
+      <div class="grid">
+        <div class="card"><h3>Sleep Planner</h3><p>Creates recommendations using sleep history, fatigue, hours awake, caffeine, shifts, and mission events.</p></div>
+        <div class="card"><h3>Fatigue Score</h3><p>Uses a 0–100 score to estimate fatigue and guide recommendations.</p></div>
+        <div class="card"><h3>Shift Scheduling</h3><p>Supports Night, Morning, and Evening shifts.</p></div>
+        <div class="card"><h3>Check-In</h3><p>Crew can record sleep, alertness, fatigue, and recommendation effectiveness.</p></div>
+        <div class="card"><h3>Food & Caffeine</h3><p>Tracks information that can be considered by the sleep planner.</p></div>
+        <div class="card"><h3>Feedback</h3><p>Saved feedback can help improve future recommendations.</p></div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="eyebrow">03 • Our Process</div>
+      <h2>From idea to prototype</h2>
+      <div class="process">
+        <div class="step"><strong>1. Research</strong><br><span class="muted">Sleep, fatigue, circadian rhythms, nutrition, caffeine, and NASA research.</span></div>
+        <div class="step"><strong>2. Design</strong><br><span class="muted">Explored a wearable/device idea before moving toward software.</span></div>
+        <div class="step"><strong>3. Build</strong><br><span class="muted">Developed the prototype with Flutter, Dart, and a local database.</span></div>
+        <div class="step"><strong>4. Test</strong><br><span class="muted">Tested different inputs and refined the scheduling system.</span></div>
+      </div>
+      <div class="quote">“Success usually comes to those who are too busy to be looking for it.” — Henry David Thoreau</div>
+    </section>
+
+    <section id="prototype">
+      <div class="eyebrow">04 • Prototype</div>
+      <h2>What we built</h2>
+      <div class="grid">
+        <div class="card"><h3>Home Dashboard</h3><p>Shows information based on the user's role and provides access to VITALIS features.</p></div>
+        <div class="card"><h3>Sleep Plan</h3><p>Generates and saves a personalized sleep recommendation.</p></div>
+        <div class="card"><h3>Crew Manager</h3><p>Managers can manage crew information and crew can view their own profile.</p></div>
+        <div class="card"><h3>History</h3><p>Stores previous check-ins, feedback, and saved recommendations.</p></div>
+        <div class="card"><h3>Settings</h3><p>Includes appearance, font options, account information, and settings.</p></div>
+        <div class="card"><h3>Authentication</h3><p>Uses email verification and profiles to identify users and roles.</p></div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="eyebrow">05 • Video</div>
+      <h2>Watch our YouTube video</h2>
+      <p>Learn more about the team, the process, and the VITALIS project in our video.</p>
+      <a class="button" href="https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF" target="_blank" rel="noreferrer">Watch on YouTube</a>
+      <p><a href="https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF" target="_blank" rel="noreferrer">https://youtube.com/@hipolitoolvera-o6h?si=qTO8IkG2P1zUDiOF</a></p>
+    </section>
+
+    <section id="refining">
+      <div class="eyebrow">06 • Product Refinement</div>
+      <h2>What we added & refined</h2>
+      <div class="two">
+        <div class="card">
+          <h3>What We Added</h3>
+          <ul>
+            <li>Sleep planner</li>
+            <li>Fatigue score</li>
+            <li>Shift schedule</li>
+            <li>Mission events</li>
+            <li>Check-ins</li>
+            <li>Food and caffeine tracking</li>
+            <li>Sleep history</li>
+            <li>Crew profiles</li>
+            <li>Saved recommendations</li>
+            <li>Feedback system</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What We Refined</h3>
+          <ul>
+            <li>More personalized sleep times</li>
+            <li>Better fatigue calculations</li>
+            <li>Sleep history in planning</li>
+            <li>Hours awake</li>
+            <li>Caffeine information</li>
+            <li>Work shifts</li>
+            <li>Mission conflicts</li>
+            <li>Feedback-based recommendations</li>
+            <li>App layout and organization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="testing">
+      <div class="eyebrow">07 • Testing</div>
+      <h2>What we learned</h2>
+      <div class="grid">
+        <div class="card"><h3>Early testing</h3><p>Five test subjects were used during the first prototype testing.</p></div>
+        <div class="card"><h3>Problem found</h3><p>The first version gave everyone a 22:00 sleep time, showing that it was not personalized enough.</p></div>
+        <div class="card"><h3>Our response</h3><p>We added more inputs so schedules could respond to individual sleep, fatigue, shifts, caffeine, and mission information.</p></div>
+      </div>
+    </section>
+
+    <section id="milestones">
+      <div class="eyebrow">08 • Milestones</div>
+      <h2>Project timeline</h2>
+      <div class="timeline">
+        <article>
+          <div class="date">Winter 2026</div>
+          <h3>Research & problem framing</h3>
+          <p>We started by studying human sleep needs, fatigue risks, and how crew schedules change during missions.</p>
+        </article>
+        <article>
+          <div class="date">Spring 2026</div>
+          <h3>Concept exploration</h3>
+          <p>We explored the app idea and identified the key features required for a NASA mission-inspired workflow.</p>
+        </article>
+        <article>
+          <div class="date">Summer 2026</div>
+          <h3>Prototype development</h3>
+          <p>We built the initial VITALIS prototype and tested its logic with realistic scheduling and fatigue scenarios.</p>
+        </article>
+        <article>
+          <div class="date">Fall 2026–27</div>
+          <h3>Refinement & testing</h3>
+          <p>We improved personalization, added feedback loops, and refined the experience based on test findings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="eyebrow">09 • The Team</div>
+      <h2>Meet the creators</h2>
+      <div class="grid">
+        <div class="card"><h3>Hipolito</h3><p>Focused on concept development, design, and project coordination.</p></div>
+        <div class="card"><h3>Kitzel</h3><p>Helped build and refine the prototype while contributing to the system's user experience.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow">10 • Contact</div>
+      <h2>Get in touch</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Kitzel</h3>
+          <p>Email: <a href="mailto:2201915@stu.bisd.us">2201915@stu.bisd.us</a></p>
+        </div>
+        <div class="card">
+          <h3>Hipolito</h3>
+          <p>Email: <a href="mailto:1602274@stu.bisd.us">1602274@stu.bisd.us</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="eyebrow">11 • Sources</div>
+      <h2>Bibliography</h2>
+      <ul>
+        <li>NASA Human Research Program – sleep and circadian rhythm research.</li>
+        <li>Studies on fatigue, alertness, and shift work impacts on performance and safety.</li>
+        <li>Research on caffeine timing, naps, and fatigue management in operational settings.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    VITALIS • NASA HUNCH • Built for lunar sleep and shift planning.
+  </footer>
+</body>
+</html>
