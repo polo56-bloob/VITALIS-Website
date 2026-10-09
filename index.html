@@ -4,6 +4,20 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>VITALIS | NASA HUNCH</title>
 <style>
+  .hero-image {
+  height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0b1928;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 :root{--bg:#07111f;--card:#0d1b2d;--line:#24405a;--text:#edf6ff;--muted:#a9bfd3;--blue:#63c7ff;--green:#8ee6d1}
 *{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:radial-gradient(circle at 20% 0,#12304b,#07111f 45%);color:var(--text);line-height:1.6}
 header{position:sticky;top:0;background:#07111ff5;border-bottom:1px solid var(--line);z-index:20;backdrop-filter:blur(8px)}
@@ -29,7 +43,9 @@ footer{text-align:center;padding:40px 22px;border-top:1px solid var(--line);colo
 <a href="#overview">Overview</a><a href="#about">Problem</a><a href="#solution">Solution</a><a href="#process">Process</a><a href="#prototype">Prototype</a><a href="#refining">Refinement</a><a href="#media">Media</a><a href="#gallery">Gallery</a><a href="#testing">Testing</a><a href="#milestones">Milestones</a><a href="#materials">Technology</a><a href="#team">Team</a><a href="#contacts">Contacts</a><a href="#sources">Bibliography</a>
 </div></nav></header>
 <main>
-<div class="hero"><div><div class="eyebrow">NASA HUNCH • SFT 2026–27</div><h1>VITAL<span>I</span>S</h1><p><strong>Lunar Sleep-Shift Scheduling Tool</strong></p><p>Our student-developed prototype for helping astronauts manage sleep, fatigue, naps, caffeine, and changing work shifts during space missions.</p><div class="action-row"><a class="button" href="#overview">Project Overview</a><a class="button" href="#media">Project Media</a></div></div><div class="orbit"><div class="ring"></div><div class="planet"></div></div></div>
+<div class="hero"><div><div class="eyebrow">NASA HUNCH • SFT 2026–27</div><h1>VITAL<span>I</span>S</h1><p><strong>Lunar Sleep-Shift Scheduling Tool</strong></p><p>Our student-developed prototype for helping astronauts manage sleep, fatigue, naps, caffeine, and changing work shifts during space missions.</p><div class="action-row"><a class="button" href="#overview">Project Overview</a><a class="button" href="#media">Project Media</a></div></div><div class="hero-image">
+  <img src="NASA_Hunch-Vitalis.png" alt="VITALIS project image">
+</div></div>
 <section id="overview"><div class="eyebrow">01 • Project Overview</div><h2>Project Overview</h2><div class="card">
 <p>VITALIS is our student-developed prototype for the NASA HUNCH SFT 2026–27 Lunar Sleep-Shift Scheduling Tool. NASA HUNCH challenged us to develop an onboard, offline system that can help astronauts manage sleep and work-shift changes while reducing fatigue during missions. The concept is designed to provide personalized sleep and wake recommendations, naps, caffeine and sleep-aid timing, fatigue monitoring, and feedback while still allowing mission operations to override recommendations when necessary.</p>
 <p>Our team turned that challenge into VITALIS, a software-based prototype focused on making the system practical and accessible on mission computers or tablets. We researched astronaut sleep, circadian rhythms, fatigue, nutrition, caffeine, and wearable technology, then moved from our early hardware/wearable concept toward a software system. We built the prototype with Flutter and Dart and developed features including crew profiles, authentication, sleep planning, fatigue scoring, shift scheduling, mission events, food and caffeine tracking, check-ins, saved recommendations, feedback, and history. We continue to test the system with different inputs and refine the scheduling logic so that recommendations can better respond to each crew member and the demands of mission operations.</p>
