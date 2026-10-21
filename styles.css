@@ -257,3 +257,12 @@ footer small{display:block;margin-top:6px;font-size:.84rem}
   html{scroll-behavior:auto}
   *{transition:none!important}
 }
+
+/* ---------- In-page jump links and anchors ---------- */
+.subnav{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.subnav a{
+  padding:7px 14px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(14,29,48,.7);color:var(--muted);font-size:.84rem;font-weight:600;
+}
+.subnav a:hover{color:var(--text);border-color:var(--blue);text-decoration:none}
+section[id]{scroll-margin-top:90px}
