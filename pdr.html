@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>PDR Feedback | VITALIS NASA HUNCH</title><link rel="stylesheet" href="styles.css">
+<style>
+.pdr-lead{max-width:68ch;margin:0 0 22px}
+.step.now{border-left-color:var(--green)}
+.step .k{display:block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:2px}
+.step.now .k{color:var(--blue)}
+.step small{display:block;margin-top:4px;color:var(--muted);font-size:.86rem;line-height:1.5}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:18px;font-size:.82rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+.filters{display:flex;flex-direction:column;gap:12px;background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:26px}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.frow .lab{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);width:70px;flex:none}
+.f-chip{font:inherit;font-size:.84rem;font-weight:600;color:var(--muted);background:rgba(14,29,48,.7);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;transition:border-color .15s,color .15s}
+.f-chip:hover{color:var(--text);border-color:var(--blue)}
+.f-chip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#04121f}
+.count{margin:0;font-size:.84rem;color:var(--muted)}
+.groups{display:flex;flex-direction:column;gap:30px}
+.group h3{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}
+.group h3 span{font-size:.78rem;font-weight:600;color:var(--muted)}
+.items{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,var(--card),var(--card-2));overflow:hidden}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:14px 18px;margin:0;border-top:1px solid var(--line-soft)}
+.item:first-child{border-top:0}
+.item .txt{margin:0;color:var(--text);min-width:0}
+.item .note{grid-column:1;margin:0;font-size:.86rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;justify-content:flex-end;align-content:flex-start;gap:6px;max-width:280px}
+.tag{font-size:.72rem;font-weight:700;border-radius:6px;padding:3px 9px;white-space:nowrap;border:1px solid transparent}
+.tag.w{color:#cdb4ff;background:rgba(160,120,255,.14)}
+.tag.h{color:var(--green);background:rgba(127,227,205,.12)}
+.tag.in{color:var(--blue);border-color:var(--line)}
+.tag.gap{color:var(--muted);border:1px dashed var(--muted)}
+.empty{padding:24px;color:var(--muted);border:1px dashed var(--line);border-radius:var(--radius)}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,var(--card),var(--card-2))}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px;padding:18px;margin:0;border-top:1px solid var(--line-soft)}
+.steps li:first-child{border-top:0}
+.steps li:before{content:counter(s);grid-row:span 4;font-size:1.6rem;font-weight:800;color:var(--blue);line-height:1.1}
+.steps b{color:var(--text);font-size:1.02rem}
+.steps p{margin:0;font-size:.94rem}
+.steps .from{font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+.swatches{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted)}
+.swatches span{display:inline-flex;align-items:center;gap:6px}
+.swatches i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.foot-note{max-width:68ch;margin-top:18px;font-size:.9rem}
+@media(max-width:720px){
+  .item{grid-template-columns:minmax(0,1fr)}
+  .meta{justify-content:flex-start;max-width:none}
+  .frow .lab{width:100%}
+}
+</style></head><body><a class="skip-link" href="#main">Skip to content</a><header><nav><div class="nav-brand"><a class="logo" href="index.html" aria-label="VITALIS home">VITAL<span>I</span>S</a><img class="team-top" src="NASA_Hunch-Vitalis.png" alt="VITALIS logo"></div><div class="nav-links"><a href="index.html">Home</a><a href="problem.html">Problem</a><a href="solution.html">Solution</a><a href="process.html">Process</a><a href="pdr.html" aria-current="page">PDR</a><a href="prototype.html">Prototype</a><a href="media.html">Media</a><a href="team.html">Team</a><a href="technology.html">Technology</a><a href="bibliography.html">Bibliography</a></div></nav></header><main id="main"><div class="page-intro"><div class="eyebrow">VITALIS • NASA HUNCH SFT 2026–27</div><h1 class="page-title">PDR Feedback</h1><p class="pdr-lead">What the judges and other teams told us at our Preliminary Design Review, sorted by who said it and what it asks us to change, plus where each item lands in our next steps.</p><div class="subnav" role="navigation" aria-label="On this page"><a href="#what">What a PDR is</a><a href="#feedback">The feedback</a><a href="#next">Next steps</a><a href="#sources">Source material</a></div></div><div class="page-content">
+
+<section id="what"><div class="eyebrow">Overview</div><h2>What a PDR is</h2>
+<p class="pdr-lead">A Preliminary Design Review is an early checkpoint. The team presents its design and plan before the final build, and reviewers check that the approach can meet the requirements and point out risks while changes are still easy to make. Our review gave us comments from the judges, Ms. Westover and Mr. Hayes, and from the other teams.</p>
+<div class="process">
+<div class="step"><span class="k">Done</span><strong>Concept</strong><small>Problem, crew needs and a first version of the app.</small></div>
+<div class="step now"><span class="k">We are here • reviewed</span><strong>PDR</strong><small>Design presented, feedback collected, changes now being planned.</small></div>
+<div class="step"><span class="k">Next</span><strong>CDR</strong><small>Critical Design Review. Usually a more detailed, near-final check of the design.</small></div>
+<div class="step"><span class="k">Later</span><strong>Final delivery</strong><small>Finished app and project package.</small></div>
+</div>
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>What reviewers look for</h3><p>Does the design solve the stated problem for the real users, and what could go wrong?</p></div>
+<div class="card"><h3>What we do with it</h3><p>List every comment, group the repeats, and decide what goes into the app and in what order.</p></div>
+<div class="card"><h3>Why repeats matter</h3><p>When both judges raise the same point, it moves to the top of our list.</p></div>
+</div></section>
+
+<section id="feedback"><div class="eyebrow">Judges and teams</div><h2>The feedback</h2>
+<p class="pdr-lead">Each line is one request, reworded for clarity. Tags show who asked. A dashed tag means the item is not yet part of our next steps.</p>
+<div class="filters">
+<div class="frow" id="f-who"><span class="lab">Who</span></div>
+<div class="frow" id="f-theme"><span class="lab">Topic</span></div>
+<div class="frow" id="f-plan"><span class="lab">Plan</span></div>
+<p class="count" id="count" aria-live="polite"></p>
+</div>
+<div class="groups" id="groups"></div></section>
+
+<section id="next"><div class="eyebrow">Our plan</div><h2>Next steps</h2>
+<p class="pdr-lead">Our own plan, in the order we want to build it. The line under each step shows how many feedback items it covers.</p>
+<ol class="steps" id="steps"></ol></section>
+
+<section id="sources"><div class="eyebrow">Links</div><h2>Source material</h2>
+<div class="grid">
+<div class="card"><h3>Project slides</h3><p>The deck with more background on the project.</p><p><a href="https://docs.google.com/presentation/d/1u5LjldyDHPapQp_XLfIFg8Ex9oTPL9W4vDAah7dt0x4/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener">Open in Google Slides</a></p></div>
+<div class="card"><h3>Research</h3><p>Research notes from the NASA HUNCH site.</p><p><a href="https://docs.google.com/document/d/1jLmBum_ASQnow7Bv8GfCyazmf5-7gGctodLFgll4wFc/edit?usp=sharing" target="_blank" rel="noopener">Open in Google Docs</a></p></div>
+<div class="card"><h3>Examples of Excellence</h3><p>Samples of innovation and other points and comments.</p><p><a href="https://docs.google.com/presentation/d/1DX18QZEK2COP1ejJXya9LEEXzFsawODeB4FLN55Y8_0/edit?usp=sharing" target="_blank" rel="noopener">Open in Google Slides</a></p></div>
+</div>
+<p class="foot-note">Mr. Hayes wrote doses as grams. Melatonin and caffeine doses are normally given in milligrams, so we will confirm the units with a reliable source before they go into the app.</p></section>
+
+</div></main><footer><strong>VITALIS</strong><br>NASA HUNCH SFT 2026–27 • Lunar Sleep-Shift Scheduling Tool<small>Student project by Kitzel Mendiola, Hipolito Olvera, and Aracely Oviedo.</small><span class="disclaimer">A student design prototype. Not a medical device and not NASA-approved.</span></footer>
+
+<script>
+var THEMES = [
+  ["shift", "Shifts and overrides"],
+  ["dose", "Caffeine, melatonin and dosing"],
+  ["sleep", "Falling asleep, waking and tracking"],
+  ["alert", "Fatigue and alertness"],
+  ["data", "Real-time data"],
+  ["env", "Food and light"]
+];
+
+var STEPS = [
+  ["Full-week color-coded schedule", "Every hour of the week on the home screen, built from the sleep and check-in tabs. Managers click a name to see and edit that person's schedule. Crew see their own.", "colors"],
+  ["Food system", "Add calories, tie meals to the schedule and the recommendations, and tell astronauts when to eat so they are not eating right before bed.", ""],
+  ["Shift change warning and override", "Warn before a shift changes and let the user override the recommended schedule. Today the app blocks changes after a full week of check-ins.", ""],
+  ["Review the NASA HUNCH links", "Read the research links on the HUNCH site, report what they say, and add them to the plan.", ""],
+  ["Astronaut-chosen sleep time", "Let each astronaut pick when they sleep in the sleep tab, since some prefer to sleep later.", ""],
+  ["Epworth Sleepiness Scale in check-in", "Use the scale to produce an alertness score and feed it into the check-in and the rest of the app.", ""],
+  ["UTC clock", "Run a UTC clock and base the app's timing on it.", ""],
+  ["Email reminders", "Email reminders to check in and log sleep.", ""],
+  ["Apple Watch and Apple Health", "Bring in temperature and heart rate, and connect to Apple Health, to fit sleep recommendations to each astronaut and track sleep quality.", ""],
+  ["Other devices", "Make the app run on other devices so we can start sharing it.", ""]
+];
+
+var ITEMS = [
+  ["Ask “Are you changing your shift? Yes or No” and warn before a shift is changed.", 1, 1, "shift", [3], ""],
+  ["Change shifts gradually, never from day to night in one step, and give a plan for how to shift the work schedule step by step for the best sleep.", 1, 1, "shift", [], ""],
+  ["Fix the override. It does not work when the app has picked the best sleep schedule.", 1, 1, "shift", [3], ""],
+  ["Auto-navigate shifts so the schedule can be rebuilt quickly in an emergency such as a solar storm.", 1, 0, "shift", [], ""],
+  ["Shifts follow the schedule automatically. The mission plan comes first, ahead of sleep.", 0, 1, "shift", [], ""],
+  ["When a shift starts early, show the fatigue score and a recommendation.", 0, 1, "shift", [6], ""],
+  ["Operations crew have no time for tests, so the app should do the scheduling work and give recommendations.", 0, 1, "shift", [], "Step 6 adds a questionnaire. Keep it short or let the watch fill in what it can."],
+  ["Give dosage recommendations, for example melatonin to sleep and caffeine to wake.", 1, 1, "dose", [], "Mr. Hayes noted grams. Check units before building."],
+  ["Account for caffeine metabolism and how it affects sleep. Crew may have no space in the schedule to sleep if caffeine is timed badly.", 1, 1, "dose", [], ""],
+  ["Offer medical aids and specific caffeine and melatonin levels.", 0, 1, "dose", [], ""],
+  ["Measure when someone falls asleep, not when they lie down, and optimize the time it takes to fall asleep.", 0, 1, "sleep", [9], ""],
+  ["Include the wake-up process and routine, and different ways of waking.", 0, 1, "sleep", [], ""],
+  ["Recommend a sleep time and schedule a wind-down before it.", 0, 1, "sleep", [1], ""],
+  ["Optimize the amount of sleep and track when people sleep.", 0, 1, "sleep", [9], ""],
+  ["Take sleep apnea into account.", 0, 1, "sleep", [], ""],
+  ["Schedule every 15 minutes of the day.", 1, 0, "sleep", [1], "Our plan is hourly. A 15-minute grid is the finer option."],
+  ["Connect the Epworth Sleepiness Scale to alertness in the check-in tab.", 0, 1, "alert", [6], ""],
+  ["Explain the fatigue score: 0 is not fatigued and 100 is very fatigued.", 0, 1, "alert", [], ""],
+  ["Look up what cognitive impact means and how to measure it.", 0, 1, "alert", [], ""],
+  ["Use real-time data. Pick one method, such as an Apple Watch, to collect data, measure sleep quality and factor in brain waves.", 0, 1, "data", [9], ""],
+  ["Let people access their data as a log.", 0, 1, "data", [9], ""],
+  ["Research foods that help with waking and with sleeping.", 0, 1, "env", [2], ""],
+  ["Look at LED light frequencies.", 0, 1, "env", [], ""]
+];
+
+var state = { who: "all", theme: "all", plan: "all" };
+
+function el(id) { return document.getElementById(id); }
+
+function chips(rowId, key, opts) {
+  var row = el(rowId);
+  opts.forEach(function (o) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "f-chip"; b.textContent = o[1];
+    b.setAttribute("data-v", o[0]);
+    b.addEventListener("click", function () { state[key] = o[0]; render(); });
+    row.appendChild(b);
+  });
+}
+
+function sync() {
+  [["f-who", "who"], ["f-theme", "theme"], ["f-plan", "plan"]].forEach(function (p) {
+    var btns = el(p[0]).querySelectorAll("button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute("aria-pressed", btns[i].getAttribute("data-v") === state[p[1]] ? "true" : "false");
+    }
+  });
+}
+
+function passes(it) {
+  var w = it[1], h = it[2];
+  if (state.who === "w" && !w) return false;
+  if (state.who === "h" && !h) return false;
+  if (state.who === "both" && !(w && h)) return false;
+  if (state.theme !== "all" && it[3] !== state.theme) return false;
+  if (state.plan === "in" && !it[4].length) return false;
+  if (state.plan === "gap" && it[4].length) return false;
+  return true;
+}
+
+function render() {
+  sync();
+  var out = "", shown = 0;
+  THEMES.forEach(function (t) {
+    var rows = ITEMS.filter(function (it) { return it[3] === t[0] && passes(it); });
+    if (!rows.length) return;
+    shown += rows.length;
+    out += '<div class="group"><h3>' + t[1] + " <span>" + rows.length + '</span></h3><ul class="items">';
+    rows.forEach(function (it) {
+      out += '<li class="item"><p class="txt">' + it[0] + "</p>";
+      if (it[5]) out += '<p class="note">' + it[5] + "</p>";
+      out += '<div class="meta">';
+      if (it[1]) out += '<span class="tag w">Ms. Westover</span>';
+      if (it[2]) out += '<span class="tag h">Mr. Hayes</span>';
+      out += it[4].length
+        ? '<span class="tag in">In plan: step ' + it[4].join(", ") + "</span>"
+        : '<span class="tag gap">Not in plan yet</span>';
+      out += "</div></li>";
+    });
+    out += "</ul></div>";
+  });
+  el("groups").innerHTML = out || '<p class="empty">No feedback matches these filters.</p>';
+  var gaps = ITEMS.filter(function (it) { return !it[4].length; }).length;
+  el("count").textContent = "Showing " + shown + " of " + ITEMS.length + " items. " + gaps + " are not in our plan yet.";
+}
+
+function renderSteps() {
+  var out = "";
+  STEPS.forEach(function (s, i) {
+    var n = ITEMS.filter(function (it) { return it[4].indexOf(i + 1) > -1; }).length;
+    out += "<li><b>" + s[0] + "</b><p>" + s[1] + "</p>";
+    if (s[2] === "colors") {
+      out += '<div class="swatches"><span><i style="background:#1d2f8f"></i>Sleeping, deep blue</span><span><i style="background:#7fb4ee"></i>Laying down, light blue</span><span><i style="background:#ee8a2a"></i>Eating, orange</span><span><i style="background:#f0c22e"></i>Working, yellow</span><span><i style="background:#3dac69"></i>Free time, green</span></div>';
+    }
+    out += '<span class="from">' + (n ? "Covers " + n + " feedback item" + (n > 1 ? "s" : "") : "From our own plan") + "</span></li>";
+  });
+  el("steps").innerHTML = out;
+}
+
+chips("f-who", "who", [["all", "All"], ["w", "Ms. Westover"], ["h", "Mr. Hayes"], ["both", "Raised by both"]]);
+chips("f-theme", "theme", [["all", "All"]].concat(THEMES));
+chips("f-plan", "plan", [["all", "All"], ["in", "In our plan"], ["gap", "Not in plan yet"]]);
+renderSteps();
+render();
+</script>
+</body></html>
