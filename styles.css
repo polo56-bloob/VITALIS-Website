@@ -266,3 +266,8 @@ footer small{display:block;margin-top:6px;font-size:.84rem}
 }
 .subnav a:hover{color:var(--text);border-color:var(--blue);text-decoration:none}
 section[id]{scroll-margin-top:90px}
+
+/* ---------- Bibliography topic groups ---------- */
+.ref-group{margin:34px 0 14px;font-size:1.15rem;color:var(--green)}
+.card > .ref-group:first-child{margin-top:0}
+.references li a{overflow-wrap:anywhere}
