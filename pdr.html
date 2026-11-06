@@ -203,7 +203,7 @@ function renderSteps() {
     var n = ITEMS.filter(function (it) { return it[4].indexOf(i + 1) > -1; }).length;
     out += "<li><b>" + s[0] + "</b><p>" + s[1] + "</p>";
     if (s[2] === "colors") {
-      out += '<div class="swatches"><span><i style="background:#1d2f8f"></i>Sleeping, deep blue</span><span><i style="background:#7fb4ee"></i>Laying down, light blue</span><span><i style="background:#ee8a2a"></i>Eating, orange</span><span><i style="background:#f0c22e"></i>Working, yellow</span><span><i style="background:#3dac69"></i>Free time, green</span></div>';
+      out += '<div class="swatches"><span><i style="background:#1d2f8f"></i>Sleeping, deep blue</span><span><i style="background:#7fb4ee"></i>Laying down, light blue</span><span><i style="background:#ee8a2a"></i>Eating, orange</span><span><i style="background:#f0c22e"></i>Working, yellow</span><span><i style="background:#3dac69"></i>Free time, green</span><span><i style="background:#e0443e"></i>Exercising, red</span></div>';
     }
     out += '<span class="from">' + (n ? "Covers " + n + " feedback item" + (n > 1 ? "s" : "") : "From our own plan") + "</span></li>";
   });
